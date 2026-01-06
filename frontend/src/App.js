@@ -8,12 +8,12 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
 // Font imports
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/inter/900.css';
-
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/900.css";
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <div className="App">
@@ -27,5 +27,12 @@ function App() {
     </div>
   );
 }
-
+function App() {
+  return (
+    <>
+      {/* your existing app */}
+      <Analytics />
+    </>
+  );
+}
 export default App;
