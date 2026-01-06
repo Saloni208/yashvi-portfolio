@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Theme Base */
+  --bg-primary: rgb(17, 17, 19);
+  --bg-secondary: rgb(26, 28, 30);
+  --bg-tertiary: rgb(38, 40, 42);
+  
+  /* Text Hierarchy */
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(218, 218, 218);
+  --text-muted: rgb(161, 161, 170);
+  
+  /* Border System */
+  --border-primary: rgb(63, 63, 63);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  
+  /* Gold Accent - Premium Warm Tone */
+  --accent-primary: rgb(212, 175, 55);
+  --accent-hover: rgb(184, 134, 11);
+  --accent-pressed: rgb(153, 112, 9);
+  --accent-bg: rgba(212, 175, 55, 0.1);
+  --accent-glow: rgba(212, 175, 55, 0.3);
+  
+  /* Shadcn compatibility */
+  --background: 0 0% 7%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 43 74% 52%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 0 0% 15%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 63%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 25%;
+  --input: 0 0% 25%;
+  --ring: 43 74% 52%;
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent-primary);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-6;
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-[rgb(212,175,55)] to-[rgb(184,134,11)] bg-clip-text text-transparent;
+  }
+}
