@@ -28,8 +28,8 @@ const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 border-t border-white/10 overflow-hidden">
       {/* Ambient glow */}
-      <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-emerald-400/10 rounded-full blur-3xl" />
+      <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-pink-400/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -37,14 +37,21 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link to="/" className="inline-block mb-4">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center">
-                  <span className="text-slate-900 font-bold text-lg">GJ</span>
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-400 to-pink-400 flex items-center justify-center">
+                  <span className="text-slate-900 font-bold text-lg">
+                    {personalInfo.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
                 </div>
                 <div>
                   <p className="text-white font-semibold text-lg">
                     {personalInfo.name}
                   </p>
-                  <p className="text-xs text-slate-400">Software Engineer</p>
+                  <p className="text-xs text-slate-400">
+                    Software Engineer
+                  </p>
                 </div>
               </div>
             </Link>
@@ -62,7 +69,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -3 }}
-                  className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-gradient-to-br hover:from-emerald-400 hover:to-blue-500 hover:text-slate-900 transition-all"
+                  className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-gradient-to-br hover:from-indigo-400 hover:to-pink-400 hover:text-slate-900 transition-all"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -79,7 +86,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-indigo-400 text-sm transition-colors flex items-center gap-1 group"
                   >
                     {link.name}
                     <ArrowUpRight
@@ -100,7 +107,7 @@ const Footer = () => {
                 <li>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-slate-300 hover:text-emerald-400 text-sm transition-colors"
+                    className="text-slate-300 hover:text-indigo-400 text-sm transition-colors"
                   >
                     {personalInfo.email}
                   </a>
@@ -122,8 +129,10 @@ const Footer = () => {
           </p>
 
           <p className="text-slate-400 text-sm flex items-center gap-1">
-            Crafted with <Heart size={14} className="text-red-400" /> using
-            React & Tailwind CSS
+            Crafted with <Heart size={14} className="text-red-400" /> by{" "}
+            <span className="font-medium text-slate-300">
+              Gauransh Jaroli
+            </span>
           </p>
         </div>
       </div>

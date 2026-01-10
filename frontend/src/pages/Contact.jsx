@@ -9,7 +9,6 @@ import {
   Send,
   ArrowUpRight,
   CheckCircle,
-  Phone,
 } from "lucide-react";
 import { personalInfo } from "../data/mock";
 import Layout from "../components/layout/Layout";
@@ -46,12 +45,6 @@ const Contact = () => {
       value: personalInfo.email,
       href: `mailto:${personalInfo.email}`,
     },
-    personalInfo.phone && {
-      icon: Phone,
-      label: "Phone",
-      value: personalInfo.phone,
-      href: `tel:${personalInfo.phone}`,
-    },
     {
       icon: Linkedin,
       label: "LinkedIn",
@@ -61,7 +54,7 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      value: "View Code & Projects",
+      value: "View Projects & Code",
       href: personalInfo.github,
     },
     {
@@ -70,7 +63,7 @@ const Contact = () => {
       value: personalInfo.location,
       href: null,
     },
-  ].filter(Boolean);
+  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 24 },
@@ -81,21 +74,21 @@ const Contact = () => {
     <Layout>
       {/* ================= SEO ================= */}
       <Helmet>
-        <title>Contact | Gauransh Jaroli – Software Engineer</title>
+        <title>Contact | Yashvi Rajpal – Software Engineer</title>
         <meta
           name="description"
-          content="Contact Gauransh Jaroli, Software Engineer from Udaipur, Rajasthan. Open to full-time roles, freelance projects, and collaborations."
+          content="Contact Yashvi Rajpal, a Computer Science undergraduate and Software Engineer. Open to internships, full-time roles, and collaborations."
         />
       </Helmet>
 
-      {/* ================= HERO (MATCHES PORTFOLIO) ================= */}
+      {/* ================= HERO ================= */}
       <section className="py-28 relative overflow-hidden">
         {/* Base background */}
         <div className="absolute inset-0 bg-slate-950" />
 
-        {/* Ambient glows (SAME AS PORTFOLIO) */}
-        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-emerald-400/10 blur-3xl rounded-full" />
-        <div className="absolute -top-32 right-0 w-[420px] h-[420px] bg-blue-500/10 blur-3xl rounded-full" />
+        {/* Ambient glows */}
+        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-indigo-400/10 blur-3xl rounded-full" />
+        <div className="absolute -top-32 right-0 w-[420px] h-[420px] bg-pink-400/10 blur-3xl rounded-full" />
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <motion.div
@@ -105,13 +98,13 @@ const Contact = () => {
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Get in{" "}
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Interested in working together, hiring, or discussing a project?
-              I’m always open to meaningful conversations.
+              Interested in opportunities, collaborations, or discussing a
+              project? I’d love to connect.
             </p>
           </motion.div>
         </div>
@@ -133,8 +126,8 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 <p className="text-slate-400">
-                  Based in Udaipur, Rajasthan. Available for full-time roles,
-                  freelance projects, and collaborations.
+                  Based in Greater Noida, Uttar Pradesh. Open to internships,
+                  full-time roles, and meaningful collaborations.
                 </p>
               </motion.div>
 
@@ -144,29 +137,24 @@ const Contact = () => {
                     {method.href ? (
                       <a
                         href={method.href}
-                        target={
-                          method.href.startsWith("mailto") ||
-                          method.href.startsWith("tel")
-                            ? undefined
-                            : "_blank"
-                        }
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-4 p-4 backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl hover:border-white/20 transition"
                       >
-                        <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-slate-300 group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-blue-500 group-hover:text-slate-900 transition">
+                        <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-slate-300 group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-pink-400 group-hover:text-slate-900 transition">
                           <method.icon size={22} />
                         </div>
                         <div className="flex-1">
                           <p className="text-sm text-slate-400">
                             {method.label}
                           </p>
-                          <p className="text-white font-medium group-hover:text-emerald-400 transition">
+                          <p className="text-white font-medium group-hover:text-indigo-400 transition">
                             {method.value}
                           </p>
                         </div>
                         <ArrowUpRight
                           size={18}
-                          className="text-slate-400 group-hover:text-blue-400 transition"
+                          className="text-slate-400 group-hover:text-pink-400 transition"
                         />
                       </a>
                     ) : (
@@ -203,12 +191,13 @@ const Contact = () => {
 
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center py-12 text-center">
-                    <CheckCircle size={36} className="text-emerald-400 mb-4" />
+                    <CheckCircle size={36} className="text-indigo-400 mb-4" />
                     <h4 className="text-xl font-semibold text-white mb-2">
-                      Message Sent Successfully
+                      Message Sent
                     </h4>
                     <p className="text-slate-400">
-                      Thanks for reaching out. I’ll get back to you shortly.
+                      Thank you for reaching out. I’ll respond as soon as
+                      possible.
                     </p>
                   </div>
                 ) : (
@@ -216,25 +205,47 @@ const Contact = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-2">
                         <Label className="text-slate-300">Name</Label>
-                        <Input name="name" required value={formData.name} onChange={handleChange} />
+                        <Input
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleChange}
+                        />
                       </div>
                       <div className="space-y-2">
                         <Label className="text-slate-300">Email</Label>
-                        <Input name="email" type="email" required value={formData.email} onChange={handleChange} />
+                        <Input
+                          name="email"
+                          type="email"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                        />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label className="text-slate-300">Subject</Label>
-                      <Input name="subject" required value={formData.subject} onChange={handleChange} />
+                      <Input
+                        name="subject"
+                        required
+                        value={formData.subject}
+                        onChange={handleChange}
+                      />
                     </div>
 
                     <div className="space-y-2">
                       <Label className="text-slate-300">Message</Label>
-                      <Textarea name="message" rows={5} required value={formData.message} onChange={handleChange} />
+                      <Textarea
+                        name="message"
+                        rows={5}
+                        required
+                        value={formData.message}
+                        onChange={handleChange}
+                      />
                     </div>
 
-                    <Button className="w-full py-6 bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 font-semibold hover:opacity-90">
+                    <Button className="w-full py-6 bg-gradient-to-r from-indigo-400 to-pink-400 text-slate-900 font-semibold hover:opacity-90">
                       <Send size={18} className="mr-2" />
                       Send Message
                     </Button>

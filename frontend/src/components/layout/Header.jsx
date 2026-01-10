@@ -29,8 +29,8 @@ const Header = () => {
     >
       {/* Ambient glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-emerald-400/10 blur-3xl rounded-full" />
-        <div className="absolute -top-24 right-0 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
+        <div className="absolute -top-24 -left-24 w-72 h-72 bg-indigo-400/10 blur-3xl rounded-full" />
+        <div className="absolute -top-24 right-0 w-72 h-72 bg-pink-400/10 blur-3xl rounded-full" />
       </div>
 
       <nav className="max-w-6xl mx-auto px-6 py-4">
@@ -41,12 +41,17 @@ const Header = () => {
               whileHover={{ scale: 1.03 }}
               className="flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-sm">GJ</span>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-400 to-pink-400 flex items-center justify-center shadow-md">
+                <span className="text-slate-900 font-bold text-sm">
+                  {personalInfo.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
+                </span>
               </div>
 
               <div className="hidden sm:block leading-tight">
-                <p className="text-white font-semibold text-base">
+                <p className="text-white font-semibold text-[15px]">
                   {personalInfo.name}
                 </p>
                 <p className="text-xs text-slate-400">
@@ -66,7 +71,7 @@ const Header = () => {
                   to={link.path}
                   className={`relative text-sm font-medium transition-colors ${
                     isActive
-                      ? "text-emerald-400"
+                      ? "text-indigo-400"
                       : "text-slate-300 hover:text-white"
                   }`}
                 >
@@ -74,7 +79,7 @@ const Header = () => {
                   {isActive && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-400 to-blue-500"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-400 to-pink-400"
                     />
                   )}
                 </Link>
@@ -86,13 +91,13 @@ const Header = () => {
           <div className="hidden md:block">
             <Link to="/contact">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-5 py-2.5 rounded-xl font-semibold text-white
-                bg-gradient-to-r from-emerald-500 to-blue-500
-                shadow-lg hover:shadow-emerald-400/30 transition-all"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className="px-4 py-2 rounded-lg font-medium text-slate-900
+                bg-gradient-to-r from-indigo-400 to-pink-400
+                shadow hover:opacity-90 transition-all"
               >
-                Get in Touch
+                Contact
               </motion.button>
             </Link>
           </div>
@@ -100,10 +105,10 @@ const Header = () => {
           {/* ================= MOBILE TOGGLE ================= */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-white hover:text-emerald-400 transition-colors"
+            className="md:hidden p-2 text-white hover:text-indigo-400 transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
@@ -123,15 +128,15 @@ const Header = () => {
                   return (
                     <motion.div
                       key={link.name}
-                      initial={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0, x: -16 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.06 }}
+                      transition={{ delay: index * 0.05 }}
                     >
                       <Link
                         to={link.path}
-                        className={`block py-2 text-base font-medium ${
+                        className={`block py-2 text-sm font-medium ${
                           isActive
-                            ? "text-emerald-400"
+                            ? "text-indigo-400"
                             : "text-slate-300"
                         }`}
                       >
@@ -142,8 +147,8 @@ const Header = () => {
                 })}
 
                 <Link to="/contact">
-                  <button className="w-full mt-3 px-5 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-emerald-500 to-blue-500">
-                    Get in Touch
+                  <button className="w-full mt-3 px-4 py-2.5 rounded-lg font-medium text-slate-900 bg-gradient-to-r from-indigo-400 to-pink-400">
+                    Contact
                   </button>
                 </Link>
               </div>

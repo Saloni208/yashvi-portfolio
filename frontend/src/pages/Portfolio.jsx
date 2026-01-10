@@ -25,10 +25,10 @@ const Portfolio = () => {
     <Layout>
       {/* ================= SEO ================= */}
       <Helmet>
-        <title>Projects | Gauransh Jaroli – Software Engineer</title>
+        <title>Projects | Yashvi Rajpal – Software Engineer</title>
         <meta
           name="description"
-          content="Explore real-world software projects by Gauransh Jaroli, Software Engineer from Udaipur, Rajasthan. Includes production-ready web platforms and scalable applications."
+          content="Explore real-world full-stack and machine learning projects by Yashvi Rajpal, a Computer Science undergraduate and Software Engineer."
         />
       </Helmet>
 
@@ -38,8 +38,8 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-slate-950" />
 
         {/* Ambient glows */}
-        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-emerald-400/10 blur-3xl rounded-full" />
-        <div className="absolute -top-32 right-0 w-[420px] h-[420px] bg-blue-500/10 blur-3xl rounded-full" />
+        <div className="absolute -top-32 -left-32 w-[480px] h-[480px] bg-indigo-400/10 blur-3xl rounded-full" />
+        <div className="absolute -top-32 right-0 w-[420px] h-[420px] bg-pink-400/10 blur-3xl rounded-full" />
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <motion.div
@@ -49,15 +49,15 @@ const Portfolio = () => {
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               My{" "}
-              <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
                 Projects
               </span>
             </h1>
 
             <p className="text-lg text-slate-300 leading-relaxed">
-              A curated selection of real-world applications I’ve built —
-              focused on scalability, production readiness, and practical
-              problem solving.
+              A selection of projects showcasing my experience in full-stack
+              development, machine learning, and building scalable,
+              production-ready applications.
             </p>
           </motion.div>
         </div>
@@ -80,7 +80,7 @@ const Portfolio = () => {
                 onClick={() => setActiveFilter(category)}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${
                   activeFilter === category
-                    ? "bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900"
+                    ? "bg-gradient-to-r from-indigo-400 to-pink-400 text-slate-900"
                     : "bg-white/5 text-slate-300 hover:bg-white/10"
                 }`}
               >
@@ -108,25 +108,25 @@ const Portfolio = () => {
                   className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all"
                 >
                   {/* Accent */}
-                  <div className="h-1 bg-gradient-to-r from-emerald-400 to-blue-500" />
+                  <div className="h-1 bg-gradient-to-r from-indigo-400 to-pink-400" />
 
                   <div className="p-8">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
-                      <span className="px-3 py-1 text-xs font-medium text-emerald-400 bg-emerald-400/10 rounded-full">
+                      <span className="px-3 py-1 text-xs font-medium text-indigo-400 bg-indigo-400/10 rounded-full">
                         {project.category}
                       </span>
 
                       {project.featured && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 text-xs text-blue-400 bg-blue-400/10 rounded-full">
-                          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
+                        <span className="inline-flex items-center gap-1 px-2 py-1 text-xs text-pink-400 bg-pink-400/10 rounded-full">
+                          <span className="w-1.5 h-1.5 bg-pink-400 rounded-full" />
                           Featured
                         </span>
                       )}
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-indigo-400 transition-colors">
                       {project.title}
                     </h3>
 
@@ -155,7 +155,7 @@ const Portfolio = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           whileHover={{ x: 3 }}
-                          className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-emerald-400"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-indigo-400"
                         >
                           <ExternalLink size={18} />
                           Live Demo
@@ -168,7 +168,7 @@ const Portfolio = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           whileHover={{ x: 3 }}
-                          className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-blue-400"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-pink-400"
                         >
                           <Github size={18} />
                           Source Code

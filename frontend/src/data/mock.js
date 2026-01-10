@@ -1,81 +1,88 @@
-// Portfolio Mock Data - Real content (Gauransh Jaroli)
+// Portfolio Mock Data — Yashvi Rajpal (Resume Accurate)
 
 export const personalInfo = {
-  name: "Gauransh Jaroli",
-  role: "Software Engineer | Full-Stack Developer",
+  name: "Yashvi Rajpal",
+  role: "Software Engineer | Full-Stack & ML Developer",
   summary:
-    "Software Engineer focused on building production-grade web applications with real-world business use cases. Experienced in frontend systems, authentication flows, admin dashboards, and debugging complex integration issues across modern tech stacks.",
-  email: "gauranshjaroli@gmail.com", // change if needed
-  linkedin: "https://www.linkedin.com/in/gauransh-jaroli",
-  github: "https://github.com/gauranshjaroli", // change if private
-  location: "Udaipur, Rajasthan, India",
+    "Computer Science undergraduate with hands-on experience in full-stack development and machine learning. Passionate about building scalable web applications, clean APIs, and applying AI techniques to solve real-world problems.",
+  email: "yashvirajpal0@gmail.com",
+  linkedin: "https://www.linkedin.com/in/yashvi-rajpal",
+  github: "https://github.com/yashvirajpal",
+  location: "Greater Noida, Uttar Pradesh, India",
   resumeLink: "/resume.pdf",
 };
 
 export const skills = [
-  { name: "React", icon: "Code2" },
-  { name: "Next.js", icon: "Layers" },
-  { name: "JavaScript (ES6+)", icon: "FileCode" },
+  { name: "React.js", icon: "Code2" },
   { name: "Node.js", icon: "Server" },
+  { name: "Express.js", icon: "Server" },
+  { name: "JavaScript (ES6+)", icon: "FileCode" },
+  { name: "Python", icon: "FileCode" },
   { name: "FastAPI", icon: "Server" },
   { name: "MongoDB", icon: "Database" },
   { name: "PostgreSQL", icon: "HardDrive" },
-  { name: "Supabase", icon: "Database" },
-  { name: "Tailwind CSS", icon: "Palette" },
+  { name: "MySQL", icon: "HardDrive" },
+  { name: "Machine Learning", icon: "Brain" },
+  { name: "OpenCV", icon: "Brain" },
+  { name: "Git & GitHub", icon: "Code2" },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "ParshWebCraft – Web Agency Platform",
+    title: "Dois Bros Web Application",
     description:
-      "Production-ready SaaS-focused web agency platform designed to generate real client enquiries and showcase service offerings.",
+      "Full-stack food ordering platform with real-time order management and admin dashboard.",
     longDescription:
-      "Designed and developed a live web agency platform from scratch with a strong focus on SEO, performance, and conversion-driven UI. Implemented secure authentication, admin-protected routes, and production deployment using modern web infrastructure.",
-    techStack: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS", "Vercel"],
-    category: "Production Web Platform",
-    link: "https://www.parshwebcraft.in",
+      "Built a complete food ordering web application allowing users to browse menus, place orders, and track order status. Developed an admin dashboard to manage menus and orders in real time, reducing manual coordination by 40%.",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+      "REST APIs",
+    ],
+    category: "Full-Stack Web Application",
+    link: "https://dois-bros-frontend.vercel.app/",
     github: null,
     featured: true,
     image: null,
   },
   {
     id: 2,
-    title: "Jayesh Sir E-Learning Platform (PWA)",
+    title: "Sign Language Recognition System",
     description:
-      "PWA-first e-learning platform with secure login, course access control, and admin-managed content delivery.",
+      "Deep learning-based system for recognizing sign language gestures from video frames.",
     longDescription:
-      "Built a scalable online learning system focused on real student usage. Implemented authentication, protected routes, enrollment logic, and session handling. Designed the system for future Android Play Store deployment using PWA + Capacitor.",
-    techStack: ["Next.js", "Supabase", "PWA", "TypeScript"],
-    category: "EdTech Platform",
+      "Built and evaluated deep learning models on 5,000+ image frames for sign language recognition. Improved model accuracy by 15% through preprocessing and architectural optimizations, and proposed OpenCV-based enhancements for real-time usage.",
+    techStack: [
+      "Python",
+      "Deep Learning",
+      "OpenCV",
+      "NumPy",
+      "Keras",
+    ],
+    category: "Machine Learning / Computer Vision",
     link: "#",
     github: null,
-    featured: true,
+    featured: false,
     image: null,
   },
   {
     id: 3,
-    title: "FreshMart – Grocery Delivery & Admin System",
+    title: "RADARSAT-1 SAR Image Despeckling",
     description:
-      "Blinkit-style grocery delivery MVP with admin dashboard, product management, and order flow.",
+      "Deep learning techniques to improve SAR image quality for remote sensing.",
     longDescription:
-      "Developed a quick-commerce grocery platform including frontend, backend APIs, and admin panel. Solved real-world issues such as MongoDB Atlas TLS setup, CORS, auth-token mismatches, and dependency conflicts while stabilizing the application.",
-    techStack: ["React", "FastAPI", "MongoDB", "Python"],
-    category: "E-commerce / Quick Commerce",
-    link: "#",
-    github: null,
-    featured: true,
-    image: null,
-  },
-  {
-    id: 4,
-    title: "EasyMed – Pharmacy Inventory System (Concept)",
-    description:
-      "Pharmacy inventory system focused on batch-wise stock tracking and expiry visibility.",
-    longDescription:
-      "Designed a pharmacy inventory solution after observing real medical store workflows. Focused on batch-level stock, expiry tracking, and low-stock alerts while avoiding heavy ERP complexity to improve daily usability for shop owners.",
-    techStack: ["System Design", "Inventory Logic", "Database Modeling"],
-    category: "Healthcare / Inventory",
+      "Designed and applied deep learning methods for despeckling 10,000+ SAR images from RADARSAT-1 Standard Beam data. Improved image clarity and demonstrated applications in remote sensing and Earth observation.",
+    techStack: [
+      "Python",
+      "Deep Learning",
+      "Image Processing",
+      "Remote Sensing",
+    ],
+    category: "Research / Deep Learning",
     link: "#",
     github: null,
     featured: false,
