@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Maintenance from "./pages/Maintenance";
 
 // Fonts
 import "@fontsource/inter/400.css";
@@ -15,7 +16,23 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import "@fontsource/inter/900.css";
 
+/**
+ * 🔒 MAINTENANCE TOGGLE
+ * true  = show maintenance page only
+ * false = normal website live
+ */
+const MAINTENANCE_MODE = true;
+
 function App() {
+  if (MAINTENANCE_MODE) {
+    return (
+      <>
+        <Maintenance />
+        <Analytics />
+      </>
+    );
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
