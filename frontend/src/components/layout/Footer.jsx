@@ -49,14 +49,14 @@ const Footer = () => {
                   <p className="text-white font-semibold text-lg">
                     {personalInfo.name}
                   </p>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-sm text-slate-400">
                     Software Engineer
                   </p>
                 </div>
               </div>
             </Link>
 
-            <p className="text-slate-300 text-sm leading-relaxed max-w-md">
+            <p className="text-slate-300 text-base leading-relaxed max-w-md">
               {personalInfo.summary}
             </p>
 
@@ -80,17 +80,19 @@ const Footer = () => {
 
           {/* ================= QUICK LINKS ================= */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold text-lg mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-slate-300 hover:text-indigo-400 text-sm transition-colors flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-indigo-400 text-base transition-colors flex items-center gap-1 group"
                   >
                     {link.name}
                     <ArrowUpRight
-                      size={14}
+                      size={16}
                       className="opacity-0 group-hover:opacity-100 transition-opacity"
                     />
                   </Link>
@@ -101,20 +103,22 @@ const Footer = () => {
 
           {/* ================= CONTACT ================= */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <h4 className="text-white font-semibold text-lg mb-4">
+              Contact
+            </h4>
             <ul className="space-y-3">
               {personalInfo.email && (
                 <li>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-slate-300 hover:text-indigo-400 text-sm transition-colors"
+                    className="text-slate-300 hover:text-indigo-400 text-base transition-colors"
                   >
                     {personalInfo.email}
                   </a>
                 </li>
               )}
               <li>
-                <span className="text-slate-400 text-sm">
+                <span className="text-slate-400 text-base">
                   {personalInfo.location}
                 </span>
               </li>
@@ -124,12 +128,12 @@ const Footer = () => {
 
         {/* ================= BOTTOM BAR ================= */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-400 text-base">
             © {currentYear} {personalInfo.name}. All rights reserved.
           </p>
 
-          <p className="text-slate-400 text-sm flex items-center gap-1">
-            Crafted with <Heart size={14} className="text-red-400" /> by{" "}
+          <p className="text-slate-400 text-base flex items-center gap-1">
+            Crafted with <Heart size={16} className="text-red-400" /> by{" "}
             <span className="font-medium text-slate-300">
               Gauransh Jaroli
             </span>

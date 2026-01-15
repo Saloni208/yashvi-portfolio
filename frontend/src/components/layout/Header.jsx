@@ -41,8 +41,8 @@ const Header = () => {
               whileHover={{ scale: 1.03 }}
               className="flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-400 to-pink-400 flex items-center justify-center shadow-md">
-                <span className="text-slate-900 font-bold text-sm">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-400 to-pink-400 flex items-center justify-center shadow-md">
+                <span className="text-slate-900 font-bold text-base">
                   {personalInfo.name
                     .split(" ")
                     .map((n) => n[0])
@@ -51,10 +51,10 @@ const Header = () => {
               </div>
 
               <div className="hidden sm:block leading-tight">
-                <p className="text-white font-semibold text-[15px]">
+                <p className="text-white font-semibold text-base md:text-lg">
                   {personalInfo.name}
                 </p>
-                <p className="text-xs text-slate-400">
+                <p className="text-sm text-slate-400">
                   Software Engineer
                 </p>
               </div>
@@ -69,7 +69,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`relative text-sm font-medium transition-colors ${
+                  className={`relative text-base font-medium transition-colors ${
                     isActive
                       ? "text-indigo-400"
                       : "text-slate-300 hover:text-white"
@@ -91,9 +91,9 @@ const Header = () => {
           <div className="hidden md:block">
             <Link to="/contact">
               <motion.button
-                whileHover={{ scale: 1.04 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
-                className="px-4 py-2 rounded-lg font-medium text-slate-900
+                className="px-5 py-2.5 rounded-lg font-medium text-slate-900 text-base
                 bg-gradient-to-r from-indigo-400 to-pink-400
                 shadow hover:opacity-90 transition-all"
               >
@@ -108,7 +108,7 @@ const Header = () => {
             className="md:hidden p-2 text-white hover:text-indigo-400 transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -134,7 +134,7 @@ const Header = () => {
                     >
                       <Link
                         to={link.path}
-                        className={`block py-2 text-sm font-medium ${
+                        className={`block py-2 text-base font-medium ${
                           isActive
                             ? "text-indigo-400"
                             : "text-slate-300"
@@ -147,7 +147,7 @@ const Header = () => {
                 })}
 
                 <Link to="/contact">
-                  <button className="w-full mt-3 px-4 py-2.5 rounded-lg font-medium text-slate-900 bg-gradient-to-r from-indigo-400 to-pink-400">
+                  <button className="w-full mt-3 px-4 py-3 rounded-lg font-medium text-base text-slate-900 bg-gradient-to-r from-indigo-400 to-pink-400">
                     Contact
                   </button>
                 </Link>
