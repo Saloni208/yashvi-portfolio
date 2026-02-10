@@ -25,7 +25,7 @@ const Portfolio = () => {
     <Layout>
       {/* ================= SEO ================= */}
       <Helmet>
-        <title>Projects | Yashvi Rajpal – Software Engineer</title>
+        <title>Projects | Saloni Pokharna – Software Engineer</title>
         <meta
           name="description"
           content="Explore real-world full-stack and machine learning projects by Yashvi Rajpal, a Computer Science undergraduate and Software Engineer."

@@ -33,10 +33,11 @@ const Home = () => {
     <Layout>
       {/* ================= SEO ================= */}
       <Helmet>
-        <title>Yashvi Rajpal | Software Engineer & Full-Stack Developer</title>
+        <title>Saloni Pokharna | Software Engineer & Full-Stack Developer</title>
         <meta
           name="description"
-          content="Yashvi Rajpal is a Computer Science undergraduate and Software Engineer, building scalable full-stack and AI-powered web applications."
+          content="Saloni Pokharna | Software Engineer & Full-Stack Developer</title>
+        <meta is a Computer Science undergraduate and Software Engineer, building scalable full-stack and AI-powered web applications."
         />
       </Helmet>
 
@@ -61,7 +62,7 @@ const Home = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
               Hi, I’m{" "}
               <span className="bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-                Yashvi Rajpal
+                Saloni Pokharna
               </span>
             </h1>
 
@@ -72,7 +73,7 @@ const Home = () => {
 
             {/* Location */}
             <p className="text-sm text-slate-400 mb-6">
-              📍 Greater Noida, Uttar Pradesh · India
+              📍 Udaipur,Rajasthan · India
             </p>
 
             {/* Summary */}

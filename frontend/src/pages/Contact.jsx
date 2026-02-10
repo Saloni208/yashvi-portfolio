@@ -74,10 +74,10 @@ const Contact = () => {
     <Layout>
       {/* ================= SEO ================= */}
       <Helmet>
-        <title>Contact | Yashvi Rajpal – Software Engineer</title>
+        <title>Contact | Saloni Pokharna – Software Engineer</title>
         <meta
           name="description"
-          content="Contact Yashvi Rajpal, a Computer Science undergraduate and Software Engineer. Open to internships, full-time roles, and collaborations."
+          content="Contact Saloni Pokharna, a Computer Science with specialization in Artificial Intelligence and Machine Learning undergraduate and Software Engineer. Open to internships, full-time roles, and collaborations."
         />
       </Helmet>
 
@@ -126,7 +126,7 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 <p className="text-slate-400">
-                  Based in Greater Noida, Uttar Pradesh. Open to internships,
+                  Based in Udaipur,Rajasthan,India. Open to internships,
                   full-time roles, and meaningful collaborations.
                 </p>
               </motion.div>
